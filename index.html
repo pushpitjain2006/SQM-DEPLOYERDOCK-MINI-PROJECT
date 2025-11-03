@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Deployer</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>DeployerDock</h1>
+        <form id="deploy-form">
+            <div>
+                <label for="repo-url">GitHub Repository URL</label>
+                <input type="url" id="repo-url" placeholder="https://github.com/user/repo.git" required>
+            </div>
+            <div>
+                <label for="base-path">Build Base Path</label>
+                <input type="text" id="base-path" placeholder="e.g. /frontend , /vite etc">
+            </div>
+            <button type="submit" id="deploy-button">Deploy</button>
+        </form>
+
+        <div id="loading">
+            Deploying... This may take a few minutes.
+        </div>
+        <div id="result"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

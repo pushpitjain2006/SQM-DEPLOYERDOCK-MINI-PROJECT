@@ -1,0 +1,115 @@
+:root {
+  --bg-color: #f4f7f6;
+  --card-bg: #ffffff;
+  --primary-color: #007aff;
+  --primary-hover: #0056b3;
+  --text-color: #333;
+  --border-color: #e0e0e0;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --radius: 12px;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+}
+h1 {
+  text-align: center;
+  margin-top: 0;
+  font-weight: 600;
+}
+form div {
+  margin-bottom: 1.25rem;
+}
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+input[type="url"], input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+input[type="url"]:focus, input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.2);
+}
+button {
+  width: 100%;
+  padding: 0.85rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+button:hover {
+  background-color: var(--primary-hover);
+}
+button:active {
+  transform: scale(0.98);
+}
+button:disabled {
+  background-color: #9ecbff;
+  cursor: not-allowed;
+}
+#result, #loading {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+#loading {
+  display: none;
+  color: #555;
+  background-color: #f0f0f0;
+}
+#result.success {
+  background-color: #e6f7ec;
+  border: 1px solid #b7ebc9;
+  color: #0f5132;
+}
+#result.error {
+  background-color: #fbeae5;
+  border: 1px solid #f6c6b9;
+  color: #842029;
+  word-break: break-word;
+}
+#result-url {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+#result-url:hover {
+  background-color: var(--primary-hover);
+}
